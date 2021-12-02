@@ -10,8 +10,11 @@
 	<script language="javascript">
 		date = new Date(Date.parse(prompt("hi kroner, type in a date in the form 'YYYY-MM-DD' and i will tell you the next palindrome/ambigram combo")));
 
+		count = 0;
 		while(date){
+			count ++;
 			document.write('<p id="header">' + date.toString() + '</p>');
+			if(count == 10) break;
 		}
 
 		// function isPalindrome(date) {
@@ -25,6 +28,10 @@
 		//             return false;
 		//         }
   //   		}
+		// }
+
+		// function isAmbigram(date) {
+		// 	d = date.toString();
 		// }
 	</script>
 </body>
