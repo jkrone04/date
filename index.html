@@ -8,11 +8,12 @@
 
 <body>
 	<script language="javascript">
-		date = new Date(Date.parse(prompt("hi kroner, type in a date in the form 'YYYY-MM-DD' and i will tell you the next palindrome/ambigram combo")));
+		date = new Date(Date.parse(prompt("hi kroner, type in a date in the form 'YYYY-MM-DD' and i will tell you the next 5 palindrome/ambigram combos")));
 
 		count = 0;
 		while(date){
-			if(isPalindrome(date) && isAmbigram(date)) {
+
+			if(!isPalindrome(date) && isAmbigram(date)) {
 				count++;
 				document.write('<p id="header">' + date.toDateString() + '</p>');
 			}
