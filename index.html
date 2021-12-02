@@ -13,7 +13,7 @@
 		count = 0;
 		while(date){
 
-			if(!isPalindrome(date) && isAmbigram(date)) {
+			if(isPalindrome(date) && isAmbigram(date)) {
 				count++;
 				document.write('<p id="header">' + date.toDateString() + '</p>');
 			}
