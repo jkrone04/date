@@ -10,13 +10,21 @@
 	<script language="javascript">
 		date = new Date(Date.parse(prompt("hi kroner, type in a date in the form 'YYYY-MM-DD' and i will tell you the next palindrome/ambigram combo")));
 
-		// var loop = new Date(start);
-		// while(loop){
-			document.write('<p id="header">' + date + '</p>');
-		<!-- } -->
+		while(date){
+			document.write('<p id="header">' + date.toString() + '</p>');
+		}
 
 		// function isPalindrome(date) {
-
+		// 	d = date.toString();
+		// 	for( var i = d.length; i > 0; i-- )
+		//     {
+		//         if( d[i] = d.charAt(d.length)-1 )
+		//         {
+		//             return true;
+		//         }else{
+		//             return false;
+		//         }
+  //   		}
 		// }
 	</script>
 </body>
