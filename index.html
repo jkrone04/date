@@ -12,36 +12,38 @@
 
 		count = 0;
 		while(date){
-			count++;
-			document.write('<p id="header">' + date.toString() + '</p>');
+			if(isPalindrome(date) && isAmbigram(date)) {
+				count++;
+				document.write('<p id="header">' + date.toDateString() + '</p>');
+			}
 			if(count >= 5) break;
 
 			var newDate = date.setDate(date.getDate() + 1);
    			date = new Date(newDate);
 		}
 
-		// function isPalindrome(date) {
-		// 	d = date.toString();
-		// 	for( var i = d.length; i > 0; i-- )
-		//     {
-		//         if( d[i] = d.charAt(d.length)-1 )
-		//         {
-		//             return true;
-		//         }else{
-		//             return false;
-		//         }
-  //   		}
-		// }
+		function isPalindrome(date) {
+			d = date.toString();
+			for( var i = d.length; i > 0; i-- )
+		    {
+		        if( d[i] = d.charAt(d.length)-1 )
+		        {
+		            return true;
+		        }else{
+		            return false;
+		        }
+    		}
+		}
 
-		// function isAmbigram(date) {
-		// 	d = date.toString();
-		// 	for( var i = 0; i < d.length; i++ )
-		//     {
-		//     	if ( d.charAt(i) == "3" || d.charAt(i) == "4" || d.charAt(i) == "6" || d.charAt(i) == "7" || d.charAt(i) == "9")
-		//     		return false;
-		//     	else return true;
-		//     }
-		// }
+		function isAmbigram(date) {
+			d = date.toString();
+			for( var i = 0; i < d.length; i++ )
+		    {
+		    	if ( d.charAt(i) == "3" || d.charAt(i) == "4" || d.charAt(i) == "6" || d.charAt(i) == "7" || d.charAt(i) == "9")
+		    		return false;
+		    	else return true;
+		    }
+		}
 	</script>
 </body>
 </html>
