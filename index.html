@@ -12,9 +12,12 @@
 
 		count = 0;
 		while(date){
-			count ++;
+			count++;
 			document.write('<p id="header">' + date.toString() + '</p>');
-			if(count == 10) break;
+			if(count >= 5) break;
+
+			var newDate = date.setDate(date.getDate() + 1);
+   			date = new Date(newDate);
 		}
 
 		// function isPalindrome(date) {
@@ -32,6 +35,12 @@
 
 		// function isAmbigram(date) {
 		// 	d = date.toString();
+		// 	for( var i = 0; i < d.length; i++ )
+		//     {
+		//     	if ( d.charAt(i) == "3" || d.charAt(i) == "4" || d.charAt(i) == "6" || d.charAt(i) == "7" || d.charAt(i) == "9")
+		//     		return false;
+		//     	else return true;
+		//     }
 		// }
 	</script>
 </body>
